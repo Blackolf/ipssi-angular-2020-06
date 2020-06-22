@@ -1,0 +1,13 @@
+.ipssi-tooltip-container {
+	display: inline-block;
+	position: relative;
+}
+
+.ipssi-tooltip {
+	position: absolute;
+	top: -40px;
+	width: 200px;
+	height: 30px;
+	padding: 5px;
+	background: white;
+}
