@@ -1,0 +1,43 @@
+
+<h1>Partie 1 : DataBinding (MVVM)</h1>
+<small>Les attributs sont dans app.component.ts</small>
+<h2>Texte "title"</h2>
+<p>
+	Bonjour, {{ title }} (one-way)
+</p>
+<label>Saisie (two-ways) :</label>
+<input [(ngModel)]="title" />
+<hr />
+
+<p>(one-way) Action (évènement clique)</p>
+<button (click)="changeTitle()">Changer le titre</button>
+<hr />
+
+<h2>Couleur</h2>
+<p [style.color]="couleur">Un texte haut en couleurs, (one-way)</p>
+<div>
+<label>Avec une liste déroulante (two-ways) :</label>
+<select [(ngModel)]="couleur">
+	<option value="black">Noir</option>
+	<option value="#ff0000">Hexa rouge</option>
+	<option value="pink">Rose</option>
+</select>
+</div>
+
+<div>
+<label>Ou bien avec un colorpicker HTML5 (two-ways)  :</label>
+<input type="color" [(ngModel)]="couleur" />
+</div>
+<hr />
+
+
+<produit-component [titre]="title" autre="Toto">
+  <p [style.color]="couleur">
+    <strong>Super coucou</strong>
+  </p>
+</produit-component>
+
+
+<produit-component>
+  OK !
+</produit-component>

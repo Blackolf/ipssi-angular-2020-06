@@ -1,0 +1,17 @@
+<div>
+	{{ monTitre }} - {{ autre }}
+	DEPUIS LE COMPOSANT PRODUIT
+</div>
+
+<div>
+	<input type="text" [(ngModel)]="produitForm.nom" />
+	<input type="number" [(ngModel)]="produitForm.prix" />
+</div>
+
+<p *ngIf="produitForm.prix" [class.negatif]="produitForm.prix < 0">
+  {{ produitForm.nom }} {{ produitForm.prix }} euros.
+</p>
+
+<div>
+	<ng-content></ng-content>
+</div>
