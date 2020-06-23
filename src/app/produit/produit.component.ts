@@ -7,8 +7,7 @@ import { Produit } from '../produit';
   styleUrls: ['./produit.component.css']
 })
 export class ProduitComponent implements OnInit {
-  produitForm: Produit = new Produit();
-
+  @Input('produit') produitForm: Produit;
   @Input('titre') monTitre: string;
   @Input() autre: string;
 
